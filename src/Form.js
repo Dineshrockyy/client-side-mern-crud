@@ -22,13 +22,13 @@ export default function Form(props) {
 
     const handelsubmit = (props)=>{
         if(props){
-            Axios.post('http://localhost:8080/api/users',user)
+            Axios.post('https://mern-crud-api-wgdp.onrender.com/api/users',user)
             .then(res=>{console.log(res.data)})
             .catch(err=>{
                 console.log(err.message)
             })
         }else if(props===false){
-            Axios.put(`http://localhost:8080/api/user/${user.id}`,user)
+            Axios.put(`https://mern-crud-api-wgdp.onrender.com/api/user/${user.id}`,user)
             .then(res=>{console.log(res.data)})
             .catch(err=>{
                 console.log(err.message)

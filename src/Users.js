@@ -9,7 +9,7 @@ export default function Users(props) {
     const [input,setinput]=useState('')
     
     useEffect(()=>{
-        Axios.get('http://localhost:8080/api/users')
+        Axios.get('https://mern-crud-api-wgdp.onrender.com/api/users')
             .then(res=>{
                 console.log(res.data)
                 setdatas(res.data)
@@ -20,7 +20,7 @@ export default function Users(props) {
     },[])
 
     const handeldelete=(id)=>{
-        Axios.delete(`http://localhost:8080/api/user/${id}`)
+        Axios.delete(`https://mern-crud-api-wgdp.onrender.com/api/user/${id}`)
             .then(res=>{
                 console.log(res.data)
             })
@@ -53,7 +53,7 @@ export default function Users(props) {
     }
 
     const handelsearch=()=>{
-        Axios.put(`http://localhost:8080/api/user?value=${input}`)
+        Axios.put(`https://mern-crud-api-wgdp.onrender.com/api/user?value=${input}`)
             .then(res=>{
                 console.log(res.data)
                 setdatas([res.data])
